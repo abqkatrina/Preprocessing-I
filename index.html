@@ -8,9 +8,8 @@
 
   <link rel="stylesheet" href="css/index.css">
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+<link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Permanent+Marker&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -22,14 +21,14 @@
       <li><a href="">Contact</a></li>
     </ul>
   </nav>
-  <header>
-    <div id="image">
+
+  <header id="image">
       <img src="clarkkent.jpg" alt="Clark Kent illustration"/>
       <h1>Clark J. Kent</h1>
       <h3>Reporter for the Daily Planet</h3>
-      <button>Show Me the Money</button>
-    </div>
+      <button id="money-button">Show Me the Money</button>
   </header>
+
   <section id="intro">
     <div class="greeting">
       <h3>Oh, hey...</h3>
@@ -37,7 +36,7 @@
         Hi, I'm Clark, but my friends call me Kal-El. I was born on the Planet Krypton but I grew up in Smallville, Kansas. I'm an award-winning journalist including a coveted Pulitzer Prize. I'm also the author of two books, <em>The Janus Contract</em> and <em>Under A Yellow Sun</em>.
       </p>
     </div>
-    <div class="skills">
+    <div id="skills">
       <h3>Skills</h3>
       <ul>
         <li>Proofreading</li>
@@ -49,13 +48,17 @@
       </ul>
     </div>
   </section>
-  <div class="work-history">
+
+  <section id="work-history">
     <table>
-        <tr id="tabletop">
-        <td>Position</td>
-        <td>Company</td>
-        <td>Duration<td>
+      <thead>
+        <tr>
+          <td>Position</td>
+          <td>Company</td>
+          <td>Duration</td>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>Investigative Reporter</td>
           <td>Daily Planet</td>
@@ -71,10 +74,11 @@
           <td>Smallville Gazette</td>
           <td>2 years</td>
         </tr>
+      </tbody>
     </table>
-  </div>
+  </section>
     <footer>
-      <copyright>Copyright Moi 2019</copyright>
+      <copyright id="copy">Copyright Moi 2019</copyright>
     </footer>
 </body>
 </html>

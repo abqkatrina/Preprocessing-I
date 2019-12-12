@@ -21,8 +21,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 62.5%;
-	font: inherit;
-	font-size: 62.5%;
+
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -34,7 +33,7 @@ body {
 	line-height: 1.2;
 }
 ol, ul {
-	list-style: none;
+	list-style: star;
 }
 blockquote, q {
 	quotes: none;
@@ -44,10 +43,11 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+// table {
+// 	border-collapse: collapse;
+// 	border-spacing: 0;
+// }
+
 
 /* Set every element's box-sizing to border-box */
 * {
@@ -60,16 +60,45 @@ table {
 
 @text-color: yellow;
 
-.border-style() {
-	border: 10px dotted yellow;
+@big-font: 'Permanent Marker', cursive;
+
+@little-font: 'Cutive Mono', monospace;
+
+
+	p {
+		color: @text-color;
+		font-size: 1.6rem;
+		font-family: @little-font;
+
+		em {
+			font-family: @little-font;
+			font-size: inherit;
+			text-decoration: underline;
+		}
+	} // close p
+
+	h1, h2, h3, h4, h5, h6 {
+		color: @text-color;
+		line-height: 1.5;
 	}
 
+	h1 {
+		font-size: 4rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
 
 html, body {
 		background-color: @main-color;
 		margin: 0 auto;
 		font-style: normal;
-		font-family: sans-serif;
+		font-family: @little-font;
 }
 
 nav {
@@ -80,98 +109,93 @@ nav {
 	justify-content: space-around;
 	position: fixed;
 
-		ul {
-			width: 100%;
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
+	ul {
+		width: 100%;
+		display: flex;
+		list-style: none;
+		justify-content: space-around;
+		align-items: center;
 
-
-			a {
-				color: @text-color;
-				font-size: 2rem;
-				text-decoration: none;
-				padding: 0 2%;
+			@media screen and (max-width: 500px) {
+				flex-direction: column;
+				justify-content: center;
 			}
-		} //close ul
+
+		// @media (max-width: 500px) {
+		// 	flex-direction: column;
+		// }
+
+		a {
+			font-family: @big-font;
+			color: @text-color;
+			font-size: 1.6rem;
+			text-decoration: none;
+			padding: 0 2%;
+		}
+	} //close ul
 } //close nav
 
-header {
+#image  {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: @accent-color;
+	margin: 0 30%;
+	align-items: center;
 
-	#image {
-		height: 40%;
-		padding: 5px;
-		margin: 2% 2% 0 2%;
-		border: 2px dotted red;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-self: center;
+		img {
+			margin-top: 30%;
+			padding: 1%;
+			height: 350px;
+			border: 2px dotted yellow;
+		}
 
-			img {
-				height: 25%;
-			}
+		h1 {
+			font-family: @big-font;
+			font-weight: 500;
+		}
 
-			h3 {
-				color: @text-color;
-				font-size: 2rem;
-			}
-	} //close #image
+		h3 {
+			font-family: @little-font;
+			font-weight: 500;
+		}
+
 
 	#money-button {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		font-size: 2rem;
+		text-align: center;
+		width: 30%;
+		font-size: 1.2rem;
+		font-family: @big-font;
+		border-radius: 10px;
+		border: 2px dotted yellow;
+		background-color: @accent-color;
+		margin: 2% auto;
+		padding: 1% 5%;
+		color: @text-color;
 	}
 } // close header
-
-p {
-	color: @text-color;
-	font-size: 1.6rem;
-
-	em {
-		font-size: inherit;
-		text-decoration: underline;
-	}
-} // close p
-
-h1 {
-	color: @text-color;
-	font-size: 4rem;
-}
-
-h2 {
-	color: @text-color;
-	font-size: 3rem;
-}
-
-h3 {
-	color: @text-color;
-	font-size: 2rem;
-}
-
-button {
-	border-radius: 10%;
-	border: .border-style();
-	background-color: @accent-color;
-	padding: 1% 15%;
-	color: @text-color;
-}
 
 #intro {
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	width: 100%;
+	margin: 0 auto;
+	font-family: @little-font;
+	background-color: @accent-color;
+
+
+		@media screen and (max-width: 500px) {
+			flex-direction: column;
+			justify-content: center;
+		}
 
 		.greeting {
-			background-color: @accent-color;
 			color: @text-color;
 			font-weight: 500;
-			width: 40%;
+			margin: 1%;
+			padding: 2% 5%;
+			width: 45%;
 
 			h3 {
 				color: @text-color;
@@ -184,60 +208,76 @@ button {
 			}
 		} //close .greeting
 
-		.skills {
-			width: 40%;
-			color: @text-color;
-			font-weight: 500
-			background-color: @main-color;
+		#skills {
+			width: 45%;
+			color: blue;
+			font-weight: 500;
+			margin: 1%;
+			padding-left: 20px;
+			background-color: yellow;
 
 			h3 {
-				color: @text-color;
+				color: blue;
 				font-size: 2rem;
 			}
 
-			li {
-				color: red;
-				font-size: 1.6rem;
+			ul {
+				width: 100%;
 
-			} //close li
+				li {
+					color: blue;
+					font-family: @little-font;
+					font-size: 1.6rem;
+				}
+			} //close ul
 		} // close .skills
 } //close .intro
 
-.work-history {
-	display: flex;
-	justify-content: center;
-	width: 80%;
-	background-color: @accent-color;
+#work-history {
+	margin: 0 auto;
+	width: 100%;
+	background-color: @main-color;
+	display: block;
 
 	table {
+		margin: 0 auto;
+		padding: 1%;
+		border: 2px dotted yellow;
+		border-top: none;
+		font-family: @little-font;
 		background-color: @accent-color;
+		border-spacing: .5rem;
+		width: 80%;
 
-			#tabletop {
-				td {font-size: 1.2rem;
-					text-decoration: underline;
-				}
-			} //close #tabletop
-
-
+		thead {
 			td {
-				font-size: 2rem;
-				color: @text-color;
-				border: .border-style();
+					color: @main-color;
+					font-size: 2rem;
+					font-weight: bold;
+					text-decoration: underline;
 			}
+		} // close table head
+		tbody {
+			td {
+				font-size: 1.5rem;
+				color: @main-color;
+				font-weight: bold;
+			}
+		} //close table body
+	} // close table
 } //close .work-history
 
 footer {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-
-	copyright {
-		font-size: 1.5rem;
-		background-color: @accent-color;
-		color: @text-color;
 		width: 100%;
-		text-align: center;
-		height: 10%;
-	}
+		height: 20%;
+		display: flex;
+		justify-content: center;
+
+		#copy {
+			text-align: center;
+			width: 20%;
+			font-size: 1.6rem;
+			background-color: @accent-color;
+			color: @text-color;
+		}
 } // close footer

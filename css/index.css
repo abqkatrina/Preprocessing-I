@@ -86,7 +86,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font: inherit;
   font-size: 62.5%;
   vertical-align: baseline;
 }
@@ -109,7 +108,7 @@ body {
 }
 ol,
 ul {
-  list-style: none;
+  list-style: star;
 }
 blockquote,
 q {
@@ -122,20 +121,44 @@ q:after {
   content: '';
   content: none;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+}
+p {
+  color: yellow;
+  font-size: 1.6rem;
+  font-family: 'Cutive Mono', monospace;
+}
+p em {
+  font-family: 'Cutive Mono', monospace;
+  font-size: inherit;
+  text-decoration: underline;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: yellow;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
 }
 html,
 body {
   background-color: blue;
   margin: 0 auto;
   font-style: normal;
-  font-family: sans-serif;
+  font-family: 'Cutive Mono', monospace;
 }
 nav {
   height: 50px;
@@ -148,76 +171,78 @@ nav {
 nav ul {
   width: 100%;
   display: flex;
+  list-style: none;
   justify-content: space-around;
   align-items: center;
 }
+@media screen and (max-width: 500px) {
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 nav ul a {
+  font-family: 'Permanent Marker', cursive;
   color: yellow;
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-decoration: none;
   padding: 0 2%;
 }
-header {
+#image {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 30%;
+  align-items: center;
+}
+#image img {
+  margin-top: 30%;
+  padding: 1%;
+  height: 350px;
+  border: 2px dotted yellow;
+}
+#image h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 500;
+}
+#image h3 {
+  font-family: 'Cutive Mono', monospace;
+  font-weight: 500;
+}
+#image #money-button {
+  text-align: center;
+  width: 30%;
+  font-size: 1.2rem;
+  font-family: 'Permanent Marker', cursive;
+  border-radius: 10px;
+  border: 2px dotted yellow;
   background-color: red;
-}
-header #image {
-  height: 40%;
-  padding: 5px;
-  margin: 2% 2% 0 2%;
-  border: 2px dotted red;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
-}
-header #image img {
-  height: 25%;
-}
-header #image h3 {
-  color: yellow;
-  font-size: 2rem;
-}
-header #money-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 2rem;
-}
-p {
-  color: yellow;
-  font-size: 1.6rem;
-}
-p em {
-  font-size: inherit;
-  text-decoration: underline;
-}
-h1 {
-  color: yellow;
-  font-size: 4rem;
-}
-h2 {
-  color: yellow;
-  font-size: 3rem;
-}
-button {
-  border-radius: 10%;
-  border: [object Object];
-  background-color: red;
-  padding: 1% 15%;
+  margin: 2% auto;
+  padding: 1% 5%;
   color: yellow;
 }
 #intro {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Cutive Mono', monospace;
+  background-color: red;
+}
+@media screen and (max-width: 500px) {
+  #intro {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 #intro .greeting {
-  background-color: red;
   color: yellow;
   font-weight: 500;
-  width: 40%;
+  margin: 1%;
+  padding: 2% 5%;
+  width: 45%;
 }
 #intro .greeting h3 {
   color: yellow;
@@ -227,39 +252,63 @@ button {
   color: yellow;
   font-size: 1.6rem;
 }
-#intro .skills {
-  width: 40%;
-  background-color: blue;
+#intro #skills {
+  width: 45%;
+  color: blue;
+  font-weight: 500;
+  margin: 1%;
+  padding-left: 20px;
+  background-color: yellow;
+}
+#intro #skills h3 {
+  color: blue;
+  font-size: 2rem;
+}
+#intro #skills ul {
+  width: 100%;
+}
+#intro #skills ul li {
+  color: blue;
+  font-family: 'Cutive Mono', monospace;
   font-size: 1.6rem;
 }
-#intro .skills ul {
-  color: yellow;
-  font-weight: 500;
-  font-size: 2.2rem;
+#work-history {
+  margin: 0 auto;
+  width: 100%;
+  background-color: blue;
+  display: block;
 }
-.work-history {
-  display: flex;
-  justify-content: center;
+#work-history table {
+  margin: 0 auto;
+  padding: 1%;
+  border: 2px dotted yellow;
+  border-top: none;
+  font-family: 'Cutive Mono', monospace;
+  background-color: red;
+  border-spacing: 0.5rem;
+  width: 80%;
 }
-.work-history table {
-  width: 50%;
-}
-.work-history table td {
+#work-history table thead td {
+  color: blue;
   font-size: 2rem;
-  color: yellow;
-  border: [object Object];
+  font-weight: bold;
+  text-decoration: underline;
+}
+#work-history table tbody td {
+  font-size: 1.5rem;
+  color: blue;
+  font-weight: bold;
 }
 footer {
+  width: 100%;
+  height: 20%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
 }
-footer copyright {
-  font-size: 1.5rem;
+footer #copy {
+  text-align: center;
+  width: 20%;
+  font-size: 1.6rem;
   background-color: red;
   color: yellow;
-  width: 100%;
-  text-align: center;
-  height: 10%;
 }
