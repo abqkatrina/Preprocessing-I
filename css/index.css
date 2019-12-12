@@ -1,1 +1,343 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.2;
+}
+ol,
+ul {
+  list-style: star;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: blue;
+  margin: 0 auto;
+  font-style: normal;
+  font-family: 'Cutive Mono', monospace;
+}
+html p,
+body p {
+  color: yellow;
+  font-size: 1.6rem;
+  font-family: 'Cutive Mono', monospace;
+}
+html p em,
+body p em {
+  font-family: 'Cutive Mono', monospace;
+  font-size: inherit;
+  text-decoration: underline;
+}
+html h1,
+body h1,
+html h2,
+body h2,
+html h3,
+body h3,
+html h4,
+body h4,
+html h5,
+body h5,
+html h6,
+body h6 {
+  color: yellow;
+  line-height: 1.5;
+}
+html h1,
+body h1 {
+  font-size: 4rem;
+}
+html h2,
+body h2 {
+  font-size: 3rem;
+}
+html h3,
+body h3 {
+  font-size: 2rem;
+}
+html nav,
+body nav {
+  height: 50px;
+  background-color: red;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+}
+@media screen and (max-width: 500px) {
+  html nav,
+  body nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+html nav a,
+body nav a {
+  font-family: 'Permanent Marker', cursive;
+  color: yellow;
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: 0 2%;
+}
+html #image,
+body #image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 30%;
+  align-items: center;
+}
+html #image img,
+body #image img {
+  margin-top: 30%;
+  padding: 1%;
+  height: 350px;
+  border: 2px dotted yellow;
+}
+html #image h1,
+body #image h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 500;
+}
+html #image h3,
+body #image h3 {
+  font-family: 'Cutive Mono', monospace;
+  font-weight: 500;
+}
+html #image #money-button,
+body #image #money-button {
+  text-align: center;
+  width: 30%;
+  font-size: 1.2rem;
+  font-family: 'Permanent Marker', cursive;
+  border-radius: 10px;
+  border: 2px dotted yellow;
+  background-color: red;
+  margin: 2% auto;
+  padding: 1% 5%;
+  color: yellow;
+  cursor: pointer;
+}
+html #intro,
+body #intro {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Cutive Mono', monospace;
+  background-color: red;
+}
+@media screen and (max-width: 500px) {
+  html #intro,
+  body #intro {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+html #intro .greeting,
+body #intro .greeting {
+  color: yellow;
+  font-weight: 500;
+  margin: 1%;
+  padding: 2% 5%;
+  width: 45%;
+}
+html #intro .greeting h3,
+body #intro .greeting h3 {
+  color: yellow;
+  font-size: 2rem;
+}
+html #intro .greeting p,
+body #intro .greeting p {
+  color: yellow;
+  font-size: 1.6rem;
+}
+html #intro #skills,
+body #intro #skills {
+  width: 45%;
+  color: blue;
+  font-weight: 500;
+  margin: 1%;
+  padding-left: 20px;
+  background-color: yellow;
+}
+html #intro #skills h3,
+body #intro #skills h3 {
+  color: blue;
+  font-size: 2rem;
+}
+html #intro #skills ul,
+body #intro #skills ul {
+  width: 100%;
+}
+html #intro #skills ul li,
+body #intro #skills ul li {
+  color: blue;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.6rem;
+}
+html #work-history,
+body #work-history {
+  margin: 0 auto;
+  width: 100%;
+  background-color: blue;
+  display: block;
+}
+html #work-history table,
+body #work-history table {
+  margin: 0 auto;
+  padding: 1%;
+  border: 2px dotted yellow;
+  border-top: none;
+  font-family: 'Cutive Mono', monospace;
+  background-color: red;
+  border-spacing: 0.5rem;
+  width: 80%;
+}
+html #work-history table thead td,
+body #work-history table thead td {
+  color: blue;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+html #work-history table tbody td,
+body #work-history table tbody td {
+  font-size: 1.5rem;
+  color: blue;
+  font-weight: bold;
+}
+html footer,
+body footer {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+}
+html footer #copy,
+body footer #copy {
+  text-align: center;
+  width: 20%;
+  font-size: 1.6rem;
+  background-color: red;
+  color: yellow;
+}
