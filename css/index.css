@@ -125,34 +125,6 @@ q:after {
 * {
   box-sizing: border-box;
 }
-p {
-  color: yellow;
-  font-size: 1.6rem;
-  font-family: 'Cutive Mono', monospace;
-}
-p em {
-  font-family: 'Cutive Mono', monospace;
-  font-size: inherit;
-  text-decoration: underline;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: yellow;
-  line-height: 1.5;
-}
-h1 {
-  font-size: 4rem;
-}
-h2 {
-  font-size: 3rem;
-}
-h3 {
-  font-size: 2rem;
-}
 html,
 body {
   background-color: blue;
@@ -160,56 +132,97 @@ body {
   font-style: normal;
   font-family: 'Cutive Mono', monospace;
 }
-nav {
+html p,
+body p {
+  color: yellow;
+  font-size: 1.6rem;
+  font-family: 'Cutive Mono', monospace;
+}
+html p em,
+body p em {
+  font-family: 'Cutive Mono', monospace;
+  font-size: inherit;
+  text-decoration: underline;
+}
+html h1,
+body h1,
+html h2,
+body h2,
+html h3,
+body h3,
+html h4,
+body h4,
+html h5,
+body h5,
+html h6,
+body h6 {
+  color: yellow;
+  line-height: 1.5;
+}
+html h1,
+body h1 {
+  font-size: 4rem;
+}
+html h2,
+body h2 {
+  font-size: 3rem;
+}
+html h3,
+body h3 {
+  font-size: 2rem;
+}
+html nav,
+body nav {
   height: 50px;
   background-color: red;
   width: 100%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   position: fixed;
 }
-nav ul {
-  width: 100%;
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-  align-items: center;
-}
 @media screen and (max-width: 500px) {
-  nav ul {
+  html nav,
+  body nav {
     flex-direction: column;
     justify-content: center;
   }
 }
-nav ul a {
+html nav a,
+body nav a {
   font-family: 'Permanent Marker', cursive;
   color: yellow;
   font-size: 1.6rem;
   text-decoration: none;
   padding: 0 2%;
 }
-#image {
+html #image,
+body #image {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 30%;
   align-items: center;
 }
-#image img {
+html #image img,
+body #image img {
   margin-top: 30%;
   padding: 1%;
   height: 350px;
   border: 2px dotted yellow;
 }
-#image h1 {
+html #image h1,
+body #image h1 {
   font-family: 'Permanent Marker', cursive;
   font-weight: 500;
 }
-#image h3 {
+html #image h3,
+body #image h3 {
   font-family: 'Cutive Mono', monospace;
   font-weight: 500;
 }
-#image #money-button {
+html #image #money-button,
+body #image #money-button {
   text-align: center;
   width: 30%;
   font-size: 1.2rem;
@@ -220,8 +233,10 @@ nav ul a {
   margin: 2% auto;
   padding: 1% 5%;
   color: yellow;
+  cursor: pointer;
 }
-#intro {
+html #intro,
+body #intro {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -232,27 +247,32 @@ nav ul a {
   background-color: red;
 }
 @media screen and (max-width: 500px) {
-  #intro {
+  html #intro,
+  body #intro {
     flex-direction: column;
     justify-content: center;
   }
 }
-#intro .greeting {
+html #intro .greeting,
+body #intro .greeting {
   color: yellow;
   font-weight: 500;
   margin: 1%;
   padding: 2% 5%;
   width: 45%;
 }
-#intro .greeting h3 {
+html #intro .greeting h3,
+body #intro .greeting h3 {
   color: yellow;
   font-size: 2rem;
 }
-#intro .greeting p {
+html #intro .greeting p,
+body #intro .greeting p {
   color: yellow;
   font-size: 1.6rem;
 }
-#intro #skills {
+html #intro #skills,
+body #intro #skills {
   width: 45%;
   color: blue;
   font-weight: 500;
@@ -260,25 +280,30 @@ nav ul a {
   padding-left: 20px;
   background-color: yellow;
 }
-#intro #skills h3 {
+html #intro #skills h3,
+body #intro #skills h3 {
   color: blue;
   font-size: 2rem;
 }
-#intro #skills ul {
+html #intro #skills ul,
+body #intro #skills ul {
   width: 100%;
 }
-#intro #skills ul li {
+html #intro #skills ul li,
+body #intro #skills ul li {
   color: blue;
   font-family: 'Cutive Mono', monospace;
   font-size: 1.6rem;
 }
-#work-history {
+html #work-history,
+body #work-history {
   margin: 0 auto;
   width: 100%;
   background-color: blue;
   display: block;
 }
-#work-history table {
+html #work-history table,
+body #work-history table {
   margin: 0 auto;
   padding: 1%;
   border: 2px dotted yellow;
@@ -288,24 +313,28 @@ nav ul a {
   border-spacing: 0.5rem;
   width: 80%;
 }
-#work-history table thead td {
+html #work-history table thead td,
+body #work-history table thead td {
   color: blue;
   font-size: 2rem;
   font-weight: bold;
   text-decoration: underline;
 }
-#work-history table tbody td {
+html #work-history table tbody td,
+body #work-history table tbody td {
   font-size: 1.5rem;
   color: blue;
   font-weight: bold;
 }
-footer {
+html footer,
+body footer {
   width: 100%;
   height: 20%;
   display: flex;
   justify-content: center;
 }
-footer #copy {
+html footer #copy,
+body footer #copy {
   text-align: center;
   width: 20%;
   font-size: 1.6rem;

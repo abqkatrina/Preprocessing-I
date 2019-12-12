@@ -65,6 +65,13 @@ q:before, q:after {
 @little-font: 'Cutive Mono', monospace;
 
 
+html, body {
+		background-color: @main-color;
+		margin: 0 auto;
+		font-style: normal;
+		font-family: @little-font;
+
+
 	p {
 		color: @text-color;
 		font-size: 1.6rem;
@@ -94,36 +101,19 @@ q:before, q:after {
 		font-size: 2rem;
 	}
 
-html, body {
-		background-color: @main-color;
-		margin: 0 auto;
-		font-style: normal;
-		font-family: @little-font;
-}
-
 nav {
 	height: 50px;
 	background-color: @accent-color;
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	position: fixed;
-
-	ul {
-		width: 100%;
-		display: flex;
-		list-style: none;
-		justify-content: space-around;
-		align-items: center;
 
 			@media screen and (max-width: 500px) {
 				flex-direction: column;
 				justify-content: center;
 			}
-
-		// @media (max-width: 500px) {
-		// 	flex-direction: column;
-		// }
 
 		a {
 			font-family: @big-font;
@@ -132,8 +122,7 @@ nav {
 			text-decoration: none;
 			padding: 0 2%;
 		}
-	} //close ul
-} //close nav
+	}//close nav
 
 #image  {
 	display: flex;
@@ -171,6 +160,7 @@ nav {
 		margin: 2% auto;
 		padding: 1% 5%;
 		color: @text-color;
+		cursor: pointer;
 	}
 } // close header
 
@@ -281,3 +271,4 @@ footer {
 			color: @text-color;
 		}
 } // close footer
+}
